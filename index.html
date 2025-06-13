@@ -473,24 +473,109 @@
     <!-- #endregion = Footer -->
 
     <!-- #region - Modal -->
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal-window">
         <div class="modal-top-line">
           <button class="modal-button-close" type="button">
             <span class="modal-button-main-area">
               <svg class="icon-button-modal">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg?v=1#icon-close"></use>
               </svg>
             </span>
           </button>
         </div>
-        <svg class="icon-button-modal">
-          <use href="./images/icons.svg?v=1#icon-user"></use>
-        </svg>
+
         <div class="modal-main-content">
           <h4 class="title-quaternary">Leave your contacts and we will call you back</h4>
+
+          <form class="form-main">
+            <div class="form-wrapper">
+              <label class="form-label" for="input-name">Name<span class="required-field">*</span></label>
+              <div class="input-content">
+                <input
+                  class="form-input"
+                  id="input-name"
+                  name="input-name"
+                  pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐ']+"
+                  placeholder="Your name"
+                  required
+                  type="text"
+                />
+                <svg class="form-icon">
+                  <use href="./images/icons.svg#icon-user"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label class="form-label" for="input-phone">Phone<span class="required-field">*</span></label>
+              <div class="input-content">
+                <input
+                  class="form-input"
+                  id="input-phone"
+                  name="input-phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                  placeholder="097-123-45-67"
+                  required
+                  type="tel"
+                />
+                <svg class="form-icon">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label class="form-label" for="input-email">Email<span class="required-field">*</span></label>
+              <div class="input-content">
+                <input
+                  class="form-input"
+                  id="input-email"
+                  name="input-email"
+                  placeholder="john.doe@mail.com"
+                  required
+                  type="email"
+                />
+                <svg class="form-icon">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label class="form-label" for="textarea-comment">Comment</label>
+              <textarea
+                class="form-textarea"
+                name="textarea-comment"
+                id="textarea-comment"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+
+            <div class="policy-content">
+              <input
+                class="form-checkbox visually-hidden"
+                type="checkbox"
+                id="form-checkbox"
+                name="checkbox"
+                required
+              />
+              <label class="form-checkbox-content" for="form-checkbox">
+                <span class="custom-checkbox">
+                  <svg class="icon-checkbox">
+                    <use href="./images/icons.svg#icon-check"></use>
+                  </svg>
+                </span>
+                <p class="form-label">
+                  I accept the terms and conditions of the <a href="#" class="policy-link">Privacy Policy</a>
+                </p>
+              </label>
+            </div>
+            <div class="modal-bottom-line">
+              <button class="button-primary">Send</button>
+            </div>
+          </form>
         </div>
-        <div class="modal-bottom-line"><button class="button-primary">Send</button></div>
       </div>
     </div>
     <!-- #endregion - Modal -->
