@@ -968,7 +968,7 @@ p {
 }
 
 .form-checkbox:checked + .form-checkbox-content .custom-checkbox {
-  border-color: var(--navy-blue);
+  border-color: var(--iris);
 }
 
 .form-checkbox:checked + .form-checkbox-content .icon-checkbox {
